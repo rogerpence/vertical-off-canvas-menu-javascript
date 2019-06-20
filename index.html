@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,22 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 
-
-
 <body>
-    <div id="mover" class="tester">
-        <a id="click1" class="clicker" href="#">click 1</a>
-    </div>    
+    <div class="sliding-panel">
+        <a data-events="click" data-handlers="toggleSlidingPanel" href="#">click 1</a>
+    </div>
     <section id="page">
         <header>Header</header>
         <nav>Navigation</nav>
         <main>Main area<br>
-            <a id="click1" class="clicker" href="#">click 1</a>
+            <a data-events="click" 
+               data-handlers="toggleSlidingPanel" 
+               href="#">click 1</a>
         </main>
         <footer>Footer</footer>
-      </section>    
+    </section>
 </body>
+<script src="./assignEventHandlers.js"></script>
 <script src="./index.js"></script>
+
 </html>

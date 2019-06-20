@@ -1,21 +1,31 @@
-let c1 = Array.from(document.querySelectorAll('.clicker'));
+const autoboundEventHandlers = {
+    toggleSlidingPanel: function (e) {
 
-c1.forEach(function(element){
-    element.addEventListener('click', (e) => {
-        let mover = document.querySelector('.tester');    
-    
-        if (mover.classList.length == 1 ||
-            mover.classList.contains('move-left')) {
-    
-            mover.classList.add('move-right');
-            mover.classList.remove('move-left');
-        }
-        else {                    
-            mover.classList.add('move-left');
-            mover.classList.remove('move-right');
-        }
-    
-        let x = 0;
-    })
-}) 
+        let panel = document.querySelector('.sliding-panel');    
+
+        const style = getComputedStyle(document.body)
+        const width = parseInt(style.getPropertyValue('--off-canvas-menu-width'),10);
+       
+        console.log(width);
+
+        panel.classList.toggle('show-panel');
+
+
+
+        // if (panel.classList.length == 1 ||
+        //     panel.classList.contains('move-left')) {
+
+        //     panel.classList.add('move-right');
+        //     panel.classList.remove('move-left');
+        // }
+        // else {                    
+        //     panel.classList.add('move-left');
+        //     panel.classList.remove('move-right');
+        // }
+
+
+    }
+}
+
+assignAutoboundEventHandlers(); 
 
