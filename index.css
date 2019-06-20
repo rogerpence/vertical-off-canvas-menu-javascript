@@ -1,0 +1,97 @@
+:root {
+    --off-canvas-transition-time: 500ms;
+    /* --off-canvas-menu-width-minus: -250px; */
+    --off-canvas-menu-width: 250px;
+}    
+
+div.tester {
+    position: absolute;
+    /* left: var(--off-canvas-menu-width-minus); */
+    top: 0px;
+    left: calc(var(--off-canvas-menu-width) * -1);
+    width: var(--off-canvas-menu-width);
+    min-height: 100%;
+    background-color: purple;
+    z-index: 500;
+}
+
+.move-left {
+    /* transform: translateX(var(--off-canvas-menu-width-minus));  */
+    transform: translateX(calc(var(--off-canvas-menu-width) * -1));  
+
+    /* transform: translateX(var(--off-canvas-menu-width-minus)); */
+
+
+    /* transform: translate3d(var(--off-canvas-menu-width-minus), 0, 0); */
+    transition: var(--off-canvas-transition-time) ease-out all;
+}    
+
+.move-right {
+    transform: translateX(var(--off-canvas-menu-width)); 
+    /* transform: translate3d(var(--off-canvas-menu-width), 0, 0); */
+    transition: var(--off-canvas-transition-time) ease-out all;
+}    
+
+ 
+ body {
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    text-align: center;
+    font-family: sans serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ #page {
+   display: grid;
+   width: 100vw;
+   height: 100vh;;
+   grid-template-areas: "head head"
+                        "nav nav" 
+                        "main main"
+                        "foot  foot";
+   grid-template-rows: 50px 1fr 1fr 30px;
+   grid-template-columns: 150px auto;   
+ }
+ 
+ #page > header {
+   grid-area: head;
+   background-color: #8ca0ff;
+ }
+ 
+ #page > nav {
+   grid-area: nav;
+   background-color: #ffa08c;
+ }
+ 
+ #page > main {
+   grid-area: main;
+   background-color: #ffff64;
+ }
+ 
+ #page > footer {
+   grid-area: foot;
+   background-color: #8cffa0;
+ }
+ 
+ @media (min-width: 768px) {   
+    #page {   
+       grid-template-areas: "head head"
+                            "nav  main"
+                            "foot  foot";
+       grid-template-rows: 50px 1fr 30px;
+       grid-template-columns: 250px auto;      
+    }      
+ } 
+ 
+ /* @media (min-width: 1024px) {   
+    #page {   
+        grid-template-areas: "head head"
+                             "nav  main"
+                             "foot  foot";
+       grid-template-rows: 50px 1fr 30px;
+       grid-template-columns: 350px auto;      
+    }      
+ }  */
