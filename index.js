@@ -39,15 +39,15 @@ const autoboundEventHandlers = {
 
 assignAutoboundEventHandlers(); 
 
-document.addEventListener('click', (e) => {
-    let panel = document.querySelector('.sliding-panel');    
-    if (panel.classList.contains('show-panel')) {
-        autoboundEventHandlers.toggleSlidingPanel(e);       
-    }        
-    else {
-        e.preventDefault();
-        e.stopPropagation();
-    }
+// document.addEventListener('click', (e) => {
+//     let panel = document.querySelector('.sliding-panel');    
+//     if (panel.classList.contains('show-panel')) {
+//         autoboundEventHandlers.toggleSlidingPanel(e);       
+//     }        
+//     else {
+//         e.preventDefault();
+//         e.stopPropagation();
+//     }
 
-})
+// })
 
