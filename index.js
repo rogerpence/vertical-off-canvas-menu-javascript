@@ -19,6 +19,7 @@ const autoboundEventHandlers = {
         console.log(width);
 
         panel.classList.toggle('show-panel');
+        document.getElementById('main-container').classList.toggle('overlay');
 
 
 
