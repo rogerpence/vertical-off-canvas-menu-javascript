@@ -1,0 +1,43 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-content: center;
+}
+
+header > section:first-of-type {
+    /* border-left: 1px solid gray; */
+}
+
+header > section {
+    /* border-right: 1px solid gray; */
+    text-align: center;
+}
+
+.border-none {
+    border: none;
+    outline: none;
+}
+
+.trans-ease-in {
+    transition: all 300ms ease-in;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+}
+
+.sliding-panel > section {
+    /* display: flex;
+    justify-content: flex-end; */
+
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px;
+    justify-items: end;
+    align-items: center;
+
+    background-color: lightgray;
+
+
+}

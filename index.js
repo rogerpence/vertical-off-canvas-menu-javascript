@@ -1,4 +1,14 @@
 const autoboundEventHandlers = {
+    testImageClick: function(e) {
+        //document.getElementById('up-down-icon').classList.toggle('rotate180')
+
+        const child = e.currentTarget.firstElementChild;
+        child.classList.toggle('rotate180');
+        autoboundEventHandlers.toggleSlidingPanel(e);
+
+        console.log(child);
+    },
+
     toggleSlidingPanel: function (e) {
 
         let panel = document.querySelector('.sliding-panel');    
@@ -28,4 +38,16 @@ const autoboundEventHandlers = {
 }
 
 assignAutoboundEventHandlers(); 
+
+document.addEventListener('click', (e) => {
+    let panel = document.querySelector('.sliding-panel');    
+    if (panel.classList.contains('show-panel')) {
+        autoboundEventHandlers.toggleSlidingPanel(e);       
+    }        
+    else {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+})
 

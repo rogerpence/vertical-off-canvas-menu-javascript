@@ -5,7 +5,7 @@
 
 div.sliding-panel {
     position: absolute;
-    top: 0px;
+    top: 40px;
     left: calc(var(--off-canvas-menu-width) * -1);
     width: var(--off-canvas-menu-width);
     min-height: 100%;
@@ -17,19 +17,6 @@ div.sliding-panel {
 .show-panel {
     transform: translateX(var(--off-canvas-menu-width));
 }
-/* 
-.move-panel-left {
-    transform: translateX(calc(var(--off-canvas-menu-width) * -1));
-    /*
-     | Args to translate3d are x, y, z positions. He
-     */
-    /* transform: translate3d(calc(var(--off-canvas-menu-width-minus) * -1), 0, 0); */
-}
-
-.move-panel-right {
-    transform: translateX(var(--off-canvas-menu-width));
-    /* transform: translate3d(var(--off-canvas-menu-width), 0, 0); */
-} */
 
 body {
     width: 100vw;
@@ -52,22 +39,22 @@ body {
     grid-template-columns: 150px auto;
 }
 
-#page>header {
+#page > header {
     grid-area: head;
     background-color: #8ca0ff;
 }
 
-#page>nav {
+#page > nav {
     grid-area: nav;
     background-color: #ffa08c;
 }
 
-#page>main {
+#page > main {
     grid-area: main;
     background-color: #ffff64;
 }
 
-#page>footer {
+#page > footer {
     grid-area: foot;
     background-color: #8cffa0;
 }
